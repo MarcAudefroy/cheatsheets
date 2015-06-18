@@ -26,7 +26,7 @@ lines
 ### C Primitif types  
 
 
-```
+```objective-c
 float myFloat = 2.0;
 bool myBool = true;
 int myInt = 42;
@@ -35,7 +35,7 @@ char myString[] = "String";
 ```
 ### Obj-C types
 
-```
+```objective-c
 id anObject = @"MyIdobject"; // id type represents an obj-c object's pointer
 NSString *myString = @"MyString";
 NSNumber *MyNumber = @27; // @27.3
@@ -48,7 +48,7 @@ IMP implementation = [anObject methodForSelector:aSelector];
 
 ### Enumeration et Bitmask
 
-```
+```objective-c
 //Enumeration
 typedef NS_ENUM(NSInteger, WifiState) {
     WifiStateUnknown = 1,
@@ -69,7 +69,7 @@ typedef NS_OPTIONS(NSUInteger, BitMaskExample){
 
 ### Array
 
-```
+```objective-c
 NSArray myArray = @[@"foo", @12, anObject];
 NSString *foo = myArray[0];
 myArray[0] = @"bar";
@@ -87,7 +87,7 @@ NSMutableArray mutableArray = [NSMutableArray arrayWithArray:myArray];
 
 ### Dictionary
 
-```
+```objective-c
 NSDictionary myDictionary = @{@"key1":@12 , @"key2":@"foo", @"key3":anObject};
 NSString *foo = myDictionary[@"key2"];
 myDictionary[@"key2"] = @"bar";
@@ -106,7 +106,7 @@ mutableDictionary[@"anRandomKey"] = fooObject;
 
 ### Blocs
 
-```
+```objective-c
 __block NSString *anString = @"foo";
 
 void (^simpleBlock)(void) = ^{
@@ -128,7 +128,7 @@ double result = multiplyTwoValues(2,4);
 
 ### Conditions
 
-```
+```objective-c
 int myInt = 1
 
 if ( myInt == 2) 
@@ -168,7 +168,7 @@ if([myString isEqualToString:@"kk"])
 
 ### Loop
 
-```
+```objective-c
 for (int i = 0; i<10; i++)
 {
 	//Do Something
@@ -197,7 +197,7 @@ for (NSString* currentString in stringArray)
 
 ### Protocols
 
-```
+```objective-c
 //Protocol1.h
 
 @protocol Protocol1 : NSObject
@@ -251,7 +251,7 @@ readonly | create only getter
 
 ### Class Implementation
 
-```
+```objective-c
 //MyCustomClass.m
 
 @interface MyCustomClass () <Protocol3> //An Extension
@@ -300,7 +300,7 @@ readonly | create only getter
 
 ###Category
 
-```
+```objective-c
 //MyCustomClass+MA.h
 
 @interface MyCustomClass (MA)
@@ -310,7 +310,7 @@ readonly | create only getter
 @end
 ```
 
-```
+```objective-c
 //MyCustomClass+MA.m
 
 @implementation MyCustomClass (MA)
@@ -328,7 +328,7 @@ readonly | create only getter
 
 ### Create Shared Instance
 
-```
+```objective-c
 + (SharedInstanceClass)sharedInstance {
     static dispatch_once_t onceToken;
     static SharedInstanceClass *sharedInstance = nil;
@@ -341,7 +341,7 @@ readonly | create only getter
 ```
 
 ### Add property to a category
-```
+```objective-c
 //AcustomClass+MA.h
 @interface ACustomClass (MA)
 
@@ -370,7 +370,7 @@ readonly | create only getter
 
 ### Create asynchronous method
 
-```
+```objective-c
 -(void)methodWithCompletion:(dispatch_block_t)completion
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
