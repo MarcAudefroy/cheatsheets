@@ -7,7 +7,7 @@
 * Inspired by Smalltalk (messaging system)
 
 ## Comments and pragma
-```
+```objective-c
 //Comment inline
 
 /*
@@ -214,7 +214,7 @@ for (NSString* currentString in stringArray)
 
 ### Class Header 
 
-```
+```objective-c
 //MyCustomClass.h
 
 #import Protocol1.h
